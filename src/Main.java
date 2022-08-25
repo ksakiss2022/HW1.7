@@ -16,21 +16,19 @@ public class Main {
         String firstName = "Ivan";
         String middleName = "Ivanovich";
         String lastName = "Ivanov";
-        String whitespace = " ";
-        String fullName = lastName + whitespace + firstName + whitespace + middleName;
-        char[] fullName2 = fullName.toCharArray();
-        for (int i = 0; i < fullName2.length; i++) {
-            System.out.print(fullName2[i]);
+        String fullName = lastName + " " + firstName + " " + middleName;
+        char[] fullNamefinal = fullName.toCharArray();
+        for (int i = 0; i < fullNamefinal.length; i++) {
+            System.out.print(fullNamefinal[i]);
         }
         System.out.println();
+
         // Task 1.2
-        String firstName1 = "Ivan";
-        firstName1 = firstName.replace("Ivan", "Ivan ");
-        String middleName1 = "Ivanovich";
-        String lastName1 = "Ivanov";
-        lastName1 = lastName.replace("Ivanov", "Ivanov ");
-        String fullName1 = lastName1 + firstName1 + middleName1;
-        System.out.println("Вариант 2 -" + fullName1);
+        String firstNameSecondOption = "Ivan";
+        String middleNameSecondOption = "Ivanovich";
+        String lastNameSecondOption = "Ivanov";
+        String fullNameSecondOption = lastNameSecondOption + " " + firstNameSecondOption + " " + middleNameSecondOption;
+        System.out.println("Вариант 2 -" + fullNameSecondOption);
 
         // Task 2
 //**Задание 2**
@@ -41,8 +39,13 @@ public class Main {
 //В качестве строки с исходными данными используйте строку fullName.
 //Результат программы выведите в консоль в формате: ”Данные ФИО сотрудника для заполнения отчета — …”
 
-        String fullName3 = fullName1.toUpperCase();
-        System.out.println("Данные ФИО сотрудника для заполнения отчета — " + fullName3);
+        //String fullName3 = fullNamefinal.toUpperCase();
+        //System.out.println("Данные ФИО сотрудника для заполнения отчета — " + fullName3);
+
+
+        String fullNameCapitelLatters = fullNameSecondOption.toUpperCase();
+        System.out.println("Данные ФИО сотрудника для заполнения отчета — " + fullNameCapitelLatters);
+
 
         // task 3
         // **Задание 3**
@@ -57,20 +60,7 @@ public class Main {
         fullName5 = fullName5.replace("ё", "е");
         System.out.println("Данные ФИО сотрудника — " + fullName5);
 
-// task 3.2.
-        String fullN = "Иванов Семён Семёнович";
-        String[] fName = fullN.split(" ");
-        String fNresult = "";
-        for (String i : fName) {
-            if (i.contains("ё")) {
-                i = i.replace("ё", "е");
-                fNresult += i;
-            } else {
-                fNresult += i;
-            }
-            fNresult += " ";
-        }
-        System.out.print("2-й вариант - Данные ФИО сотрудника — " + fNresult);
+
     }
 }
 
